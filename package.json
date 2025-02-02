@@ -1,0 +1,73 @@
+{
+  "name": "graphql-to-nestjs-generator",
+  "displayName": "GraphQL to NestJS Generator",
+  "description": "NestJS code first generator based on GraphQL SDL",
+  "version": "0.1.0",
+  "publisher": "Seshathri",
+  "repository": "https://github.com/spsesha/graphql-to-nestjs-generator",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "keybindings": [
+      {
+        "command": "graphql-to-nestjs-generator.generate",
+        "key": "shift+alt+n",
+        "when": "editorTextFocus"
+      }
+    ],
+    "commands": [
+      {
+        "command": "graphql-to-nestjs-generator.generate",
+        "title": "Generate NestJS Code from GraphQL"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "graphql-to-nestjs-generator.generate",
+          "when": "editorHasSelection",
+          "title": "GraphQL Generator"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "GraphQL to NestJS Generator",
+      "properties": {
+        "graphqlToNestJS.enableFormatting": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable automatic formatting after conversion"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "graphql": "^16.10.0"
+  }
+}
