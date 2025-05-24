@@ -2,7 +2,7 @@
   "name": "graphql-to-nestjs-generator",
   "displayName": "GraphQL to NestJS Generator",
   "description": "NestJS code first generator based on GraphQL SDL",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "Seshathri",
   "icon": "assets/logo.png",
   "repository": "https://github.com/spsesha/graphql-to-nestjs-generator",
